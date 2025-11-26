@@ -103,7 +103,7 @@ public class fenetrequiz extends javax.swing.JFrame {
         questions.add(new Question("Qui a gagné la LDC en 2019?", "Barcelone","Bayern","Liverpool","PSG",3));
         questions.add(new Question("Qui a eu le ballon d'OR en 2022?", "Messi","Haaland","Mbappé","Benzema",1));
         questions.add(new Question("Quel joueur n'est pas francais ?", "Maignan","Laporte","Olise","Tolisso",2));
-        questions.add(new Question("Quel est le meilleur club du monde?", "L'OL","Real madrid","Montpellier","Manchester united",1));
+        questions.add(new Question("Quel est le meilleur club du monde ?", "L'OL","Real madrid","Montpellier","Manchester united",1));
         
         afficherQuestionCourante();
         
