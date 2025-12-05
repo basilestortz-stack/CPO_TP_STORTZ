@@ -14,6 +14,37 @@ public class métier extends javax.swing.JFrame {
     
     private int[] codeSecret = new int[4];
     
+    private int[] getCombinaisonJoueur() {
+    int[] combi = new int[4];
+    combi[0] = Integer.parseInt(valeur_chiffre_1.getText());
+    combi[1] = Integer.parseInt(valeur_chiffre_2.getText());
+    combi[2] = Integer.parseInt(valeur_chiffre_3.getText());
+    combi[3] = Integer.parseInt(valeur_chiffre_4.getText());
+    return combi;
+}
+    
+    
+    private int[] testerCombinaison(int[] joueur) {
+
+    int exact = 0;
+    int tropGrand = 0;
+    int tropPetit = 0;
+
+    for (int i = 0; i < 4; i++) {
+        if (joueur[i] == codeSecret[i]) {
+            exact++;
+        } else if (joueur[i] > codeSecret[i]) {
+            tropGrand++;
+        } else {
+            tropPetit++;
+        }
+    }
+
+    return new int[] { exact, tropGrand, tropPetit };
+}
+    
+    
+    
 
     /**
      * Creates new form métier
@@ -164,6 +195,11 @@ private void genererCodeSecret() {
 
                         test.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
                         test.setText("tester");
+                        test.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                testActionPerformed(evt);
+                            }
+                        });
 
                         txt_lbl_chiffresexact.setText("chiffres exact :");
 
@@ -364,6 +400,13 @@ private void genererCodeSecret() {
         // TODO add your handling code here:
         decrementDigit(3);
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
+
+    private void testActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testActionPerformed
+        // TODO add your handling code here:
+       
+         
+        
+    }//GEN-LAST:event_testActionPerformed
 
     /**
      * @param args the command line arguments
