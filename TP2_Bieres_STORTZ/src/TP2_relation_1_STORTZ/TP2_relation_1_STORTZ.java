@@ -17,7 +17,7 @@ public class TP2_relation_1_STORTZ {
         Voiture uneClio = new Voiture("Clio", "Renault", 5);
         Voiture uneAutreClio = new Voiture("Clio", "Renault", 5);
         Voiture une2008 = new Voiture("2008", "Peugeot", 6);
-        Voiture uneMicra = new Voiture("Micra", "Nissan", 4);
+        Voiture uneMicra = new Voiture("Micra", "Nissann", 4);
 
 
         Personne bob = new Personne("Bobby", "Sixkiller");
